@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>🐍 Snake Game</h1>
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="stat-label">Score:</span>
+                    <span class="stat-value" id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">High Score:</span>
+                    <span class="stat-value" id="high-score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Speed:</span>
+                    <span class="stat-value" id="speed">1</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-area">
+            <canvas id="game-canvas" width="400" height="400"></canvas>
+            <div class="game-overlay" id="game-overlay">
+                <div class="overlay-content">
+                    <h2 id="overlay-title">Snake Game</h2>
+                    <p id="overlay-message">Press SPACE to start or use arrow keys to move</p>
+                    <button id="start-btn" class="game-button">Start Game</button>
+                    <button id="restart-btn" class="game-button" style="display: none;">Play Again</button>
+                </div>
+            </div>
+        </main>
+
+        <div class="controls-panel">
+            <div class="control-section">
+                <h3>Controls</h3>
+                <div class="control-grid">
+                    <button class="control-btn" id="up-btn">↑</button>
+                    <div></div>
+                    <div></div>
+                    <button class="control-btn" id="left-btn">←</button>
+                    <button class="control-btn" id="down-btn">↓</button>
+                    <button class="control-btn" id="right-btn">→</button>
+                </div>
+            </div>
+            <div class="instructions">
+                <h3>How to Play</h3>
+                <ul>
+                    <li>Use arrow keys or buttons to control the snake</li>
+                    <li>Eat the red food to grow and increase score</li>
+                    <li>Avoid hitting walls or yourself</li>
+                    <li>Press SPACE to pause/unpause</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
